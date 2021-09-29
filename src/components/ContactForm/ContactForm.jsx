@@ -21,7 +21,7 @@ function ContactForm() {
             "Last Name": lastName,
             "Address": address,
             "Phone Number": phoneNumber,
-            "ID": counter
+            "id": counter
         };
         setContacts([...contacts, newContact]);
         setCounter(prevCount => prevCount + 1);
