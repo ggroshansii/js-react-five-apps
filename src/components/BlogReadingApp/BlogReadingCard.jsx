@@ -1,13 +1,12 @@
 
-import { useState, useEffect } from "react";
+
 
 function BlogReadingCard(props) {
     return (
         <>
         <div className="blog-title-container">
-        
-        {/* Create individual blog card here */}
-
+            <p>{props.title}</p>
+            {console.log("PROPS IN CARD", props)}
         </div>
         </>
     )
