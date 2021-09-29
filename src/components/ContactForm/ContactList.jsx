@@ -1,7 +1,16 @@
 
-function ContactList() {
+
+
+function ContactList(props) {
     return (
-        null
+        <>
+        <div className="contacts-list-container">
+            {props.contacts.map(contact => {
+                console.log(contact)
+            }
+            )}
+        </div>
+        </>
     )
 }
 
