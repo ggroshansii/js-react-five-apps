@@ -1,10 +1,12 @@
 import BookmarkingAppCard from "./BookmarkingAppCard";
 
-function BookmarkingAppList() {
+function BookmarkingAppList(props) {
     return (
         <div>
-        <BookmarkingAppCard />
-
+        {props.bookmarks.map(bookmark => {
+            console.log("fired")
+            return <BookmarkingAppCard filterByTag={props.filterByTag} key={bookmark.id} {...bookmark} />
+        })}
         </div>
     )
 }

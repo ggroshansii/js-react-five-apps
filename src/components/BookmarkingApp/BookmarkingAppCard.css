@@ -1,0 +1,12 @@
+
+
+.bookmark-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.bookmark-card p {
+    padding: 0 0.5rem;
+
+}

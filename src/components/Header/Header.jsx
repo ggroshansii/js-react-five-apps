@@ -21,7 +21,7 @@ function handleInput(event) {
             <button type="button" name="bookmarkingApp" value="bookmarkingApp" onClick={handleInput}>
                 Bookmarking App
             </button>
-            <button type="button" name="blogApp" value="blogApp" onClick={handleInput}>
+            <button type="button" name="blogCRUD" value="blogCRUD" onClick={handleInput}>
                 Blog App
             </button>
         </>

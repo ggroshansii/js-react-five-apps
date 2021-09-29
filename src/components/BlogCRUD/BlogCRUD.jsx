@@ -1,7 +1,7 @@
 
-function BlogApp() {
+function BlogCRUD() {
     return (
         <div>I am the Blog App!</div>
     )
 }
-export default BlogApp;
+export default BlogCRUD;

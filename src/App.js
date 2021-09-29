@@ -4,7 +4,7 @@ import BlogPostForm from './components/BlogPostForm/BlogPostForm'
 import ContactForm from './components/Contacts/ContactForm'
 import BlogReadingApp from './components/BlogReadingApp/BlogReadingApp'
 import BookmarkingApp from './components/BookmarkingApp/BookmarkingApp';
-import BlogApp from './components/BlogApp/BlogApp';
+import BlogCRUD from './components/BlogCRUD/BlogCRUD';
 
 
 import {useState} from 'react';
@@ -31,8 +31,8 @@ function App() {
     case 'bookmarkingApp':
       html = <BookmarkingApp />
       break;
-    case 'blogApp':
-      html = <BlogApp />
+    case 'blogCRUD':
+      html = <BlogCRUD />
       break;
     default: 
       console.log("ERROR SWITCHING SELECTIONS");
