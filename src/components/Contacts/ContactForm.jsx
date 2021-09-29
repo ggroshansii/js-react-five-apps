@@ -1,6 +1,6 @@
 import "./ContactForm.css";
 import ContactList from "./ContactList.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ContactForm() {
     const [firstName, setFirstName] = useState("");
@@ -10,9 +10,10 @@ function ContactForm() {
     const [contacts, setContacts] = useState([]);
     const [counter, setCounter] = useState(0);
 
-    // useEffect(() => {
-
-    // }, [contacts]);
+    useEffect(() => {
+        localStorage.setItem("contacts", JSON.stringify(contacts))
+        console.log(localStorage);
+    }, [contacts]);
 
     function addContact(event) {
         event.preventDefault();
