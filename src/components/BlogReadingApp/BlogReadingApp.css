@@ -1,0 +1,41 @@
+
+
+.main-container {
+    margin-top: 3rem;
+    display:flex;
+    height: 100vh;
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+}
+
+.blog-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.blog-title-container button {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 1rem auto;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    background-color: transparent;
+    color: rgb(38, 38, 253);
+}
+
+.blog-body-container {
+    width: 75%;
+    margin-top: 2rem;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 2rem;
+}

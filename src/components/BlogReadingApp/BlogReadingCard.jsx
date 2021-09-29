@@ -5,8 +5,7 @@ function BlogReadingCard(props) {
     return (
         <>
         <div className="blog-title-container">
-            <p>{props.title}</p>
-            {console.log("PROPS IN CARD", props)}
+            <button id={props.id} onClick={() => props.displayBlogPost(props.id)}>{props.title}</button>
         </div>
         </>
     )
