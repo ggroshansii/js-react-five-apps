@@ -9,12 +9,10 @@ function BlogPostForm() {
 
 
     let myStorage = window.localStorage;
-    myStorage.clear();
-
 
     useEffect(() => {
         myStorage.setItem('blogs', JSON.stringify(blogs));
-        console.log(myStorage);
+        console.log(myStorage)
     }, [blogs])
 
     function handleChangeTitle(event) {
@@ -29,12 +27,14 @@ function BlogPostForm() {
         event.preventDefault();
         let newBlog = {'title': title, 'body': body};
         setBlogs([...blogs, newBlog])
-        console.log("BLOGS", blogs);
+        setTitle("");
+        setBody("");
     }
 
     return (
         <>
             <div className="blog-post-form">
+                <h1> Blog Post to Local Storage </h1>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
