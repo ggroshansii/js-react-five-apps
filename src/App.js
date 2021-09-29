@@ -33,6 +33,9 @@ function App() {
       break;
     case 'blogApp':
       html = <BlogApp />
+      break;
+    default: 
+      console.log("ERROR SWITCHING SELECTIONS");
   }
 
   return (

@@ -4,10 +4,6 @@ function Header(props) {
 
 function handleInput(event) {
     props.changeApp(event.target.value);
-    
-    console.log('fired')
-    console.log(event);
-    console.log(event.target.value)
 }
 
 
