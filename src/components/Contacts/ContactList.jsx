@@ -7,6 +7,7 @@ function ContactList(props) {
         <>
         <div className="contacts-list-container">
             {props.contacts.map(contact => {
+                console.log("CONTACT", contact)
                 return <ContactCard key={contact.id} firstName={contact.firstName} lastName={contact.lastName} address={contact.address} phoneNumber={contact.phoneNumber} />
             }
             )}

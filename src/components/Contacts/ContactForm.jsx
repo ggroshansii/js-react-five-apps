@@ -17,10 +17,10 @@ function ContactForm() {
     function addContact(event) {
         event.preventDefault();
         let newContact = {
-            "First Name": firstName,
-            "Last Name": lastName,
-            "Address": address,
-            "Phone Number": phoneNumber,
+            "firstName": firstName,
+            "lastName": lastName,
+            "address": address,
+            "phoneNumber": phoneNumber,
             "id": counter
         };
         setContacts([...contacts, newContact]);
@@ -70,9 +70,10 @@ function ContactForm() {
                         onChange={(event) => setPhoneNumber(event.target.value)}
                     />
                     <button type="submit">Submit</button>
-                    <ContactList contacts={contacts} />
+
                 </form>
             </div>
+            <ContactList contacts={contacts} />
         </>
     );
 }

@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header'
 import BlogPostForm from './components/BlogPostForm/BlogPostForm'
-import ContactForm from './components/ContactForm/ContactForm'
+import ContactForm from './components/Contacts/ContactForm'
 import BlogReadingApp from './components/BlogReadingApp/BlogReadingApp'
 import BookmarkingApp from './components/BookmarkingApp/BookmarkingApp';
 import BlogApp from './components/BlogApp/BlogApp';
