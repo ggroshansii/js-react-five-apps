@@ -5,8 +5,10 @@ import BlogReadingCard from "./BlogReadingCard";
 function BlogReadingList(props) {
     return (
         <>
-
+        {console.log("props here", props)}
         {/* Loop through individual blogcards here */}
+        {
+        }
 
         </>
     )
