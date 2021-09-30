@@ -9,7 +9,9 @@ function BlogCRUD() {
     const [counter, setCounter] = useState(0);
 
     useEffect(() => {
-        console.log('POSTS', posts)
+        localStorage.setItem('posts', JSON.stringify(posts))
+        console.log("POSTS IN STORAGE", [...posts])
+        console.log("LOCAL STORAGE", localStorage)
     }, [posts])
 
     function addPost(title, author, text, tags) {
