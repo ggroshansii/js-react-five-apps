@@ -1,12 +1,16 @@
 import BookmarkingAppForm from "./BookmarkingAppForm";
 import BookmarkingAppList from "./BookmarkingAppList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function BookmarkingApp() {
 
     const [bookmarks, setBookmarks] = useState([]);
     const [counter, setCounter] = useState(0);
     const [filter, setFilter] = useState();
+
+    useEffect(() => {
+        localStorage.setItem("bookmarks", JSON.stringify(bookmarks))
+    }, [bookmarks])
 
     function addBookmark(url, title, tag) {
         let newBookmark = {'url': url, 'title': title, 'tag': tag, 'id': counter};
