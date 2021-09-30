@@ -35,7 +35,7 @@ function BlogCRUDForm(props) {
                 <label htmlFor="author">Author:</label>
                 <input id="author" placeholder="Enter Author" type="text" value={author} name="author" onChange={handleChangeAuthor}/>
                 <label htmlFor="text">Text:</label>
-                <input id="text" placeholder="Enter Text" type="text" value={text} name="text" onChange={handleChangeText}/>
+                <textarea name="text" id="text" cols="30" rows="10" placeholder="Enter Text" value={text} onChange={handleChangeText}></textarea>
                 <label htmlFor="tags">Tags:</label>
                 <input id="tags" placeholder="Enter Tags" type="text" value={tags} name="tags" onChange={handleChangeTags}/>
                 <button type="submit">Submit</button>
