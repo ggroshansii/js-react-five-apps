@@ -1,7 +1,17 @@
+import BlogCRUDList from "./BlogCRUDList";
+import BlogCRUDForm from "./BlogCRUDForm";
+
+import { useState } from 'react';
 
 function BlogCRUD() {
+
+
+
     return (
-        <div>I am the Blog App!</div>
+        <div>
+            <BlogCRUDForm />
+            <BlogCRUDList />
+        </div>
     )
 }
 export default BlogCRUD;
