@@ -46,10 +46,26 @@ function BlogCRUD() {
         console.log("at end of delete", posts)
     }
 
+    function editPost(id) {
+        let index = posts.findIndex((element) => element.id === id);
+        let editedPosts = [...posts];
+        editedPosts[index].text = "";
+        editedPosts[index].isEditing = true;
+        setPosts(editedPosts);
+    }
+
+    function submitEdit(id, newText) {
+        let index = posts.findIndex((element) => element.id === id);
+        let editedPosts = [...posts];
+        editedPosts[index].text = newText;
+        editedPosts[index].isEditing = false;
+        setPosts(editedPosts);
+    }
+
     return (
         <div>
             <BlogCRUDForm addPost={addPost}/>
-            <BlogCRUDList posts={posts} deletePost={deletePost}/>
+            <BlogCRUDList posts={posts} deletePost={deletePost} editPost={editPost} submitEdit={submitEdit}/>
         </div>
     )
 }
