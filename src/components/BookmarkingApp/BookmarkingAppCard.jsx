@@ -7,7 +7,7 @@ function BookmarkingAppCard(props) {
                 {console.log("CARD", props)}
                 <p>{props.url}</p>
                 <p>{props.title}</p>
-                <p onClick={() => props.filterByTag(props.tag)}>#{props.tag}</p>
+                <p>#{props.tag}</p>
             </div>
         </>
     );
