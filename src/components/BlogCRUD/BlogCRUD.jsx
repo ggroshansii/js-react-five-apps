@@ -18,10 +18,38 @@ function BlogCRUD() {
         setCounter(prevCount => prevCount + 1);
     }
 
+    // function deletePost(id) {
+    //     let index = posts.findIndex((element) => element.id === id);
+    //     console.log("index", index)
+    //     let revisedPosts = posts.splice(index,1);
+    //     console.log("revised Posts", revisedPosts)
+    //     setPosts(revisedPosts);
+    //     console.log("at end of delete", posts)
+    // }
+
+    // function deletePost(id) {
+    //     let index = posts.findIndex((element) => element.id === id);
+    //     console.log("index", index)
+    //     let revisedPosts = [...posts].splice(index,1);
+    //     console.log("revised Posts", revisedPosts)
+    //     setPosts(revisedPosts);
+    //     console.log("at end of delete", posts)
+    // }
+
+    function deletePost(id) {
+        let index = posts.findIndex((element) => element.id === id);
+        console.log("index", index)
+        let revisedPosts = [...posts];
+        revisedPosts.splice(index,1);
+        console.log("revised Posts", revisedPosts)
+        setPosts(revisedPosts);
+        console.log("at end of delete", posts)
+    }
+
     return (
         <div>
             <BlogCRUDForm addPost={addPost}/>
-            <BlogCRUDList posts={posts}/>
+            <BlogCRUDList posts={posts} deletePost={deletePost}/>
         </div>
     )
 }

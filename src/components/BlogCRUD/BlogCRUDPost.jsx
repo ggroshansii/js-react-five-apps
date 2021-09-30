@@ -5,7 +5,7 @@ function BlogCRUDPost(props) {
     return (
         <div className="blog-post-container">
             <div className="blog-post-buttons">
-                <button>Delete</button>
+                <button onClick={() => props.deletePost(props.id)}>Delete</button>
                 <button>Edit</button>
             </div>
             <h2>{props.title}</h2>
