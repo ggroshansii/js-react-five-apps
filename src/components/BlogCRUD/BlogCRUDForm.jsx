@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 
-function BlogCRUDForm() {
+function BlogCRUDForm(props) {
 
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
@@ -21,12 +21,15 @@ function BlogCRUDForm() {
         setTags(event.target.value)
     }
 
-    console.log(title, author, text, tags)
+    function handleSubmit(event) {
+        event.preventDefault();
+        props.addPost(title, author, text, tags);
+    }
 
     return (
         <>
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title:</label>
                 <input id="title" placeholder="Enter Title" type="text" value={title} name="title" onChange={handleChangeTitle}/>
                 <label htmlFor="author">Author:</label>
