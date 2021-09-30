@@ -21,7 +21,7 @@ function BlogCRUD() {
     return (
         <div>
             <BlogCRUDForm addPost={addPost}/>
-            <BlogCRUDList />
+            <BlogCRUDList posts={posts}/>
         </div>
     )
 }
