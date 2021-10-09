@@ -7,7 +7,6 @@ function BookmarkingAppCard(props) {
                 {console.log("CARD", props)}
                 <p>{props.url}</p>
                 <p>{props.title}</p>
-                <p>#{props.tag}</p>
             </div>
         </>
     );

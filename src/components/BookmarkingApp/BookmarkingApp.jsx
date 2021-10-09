@@ -1,16 +1,27 @@
 import BookmarkingAppForm from "./BookmarkingAppForm";
 import BookmarkingAppList from "./BookmarkingAppList";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef} from "react";
 
 function BookmarkingApp() {
 
     const [bookmarks, setBookmarks] = useState([]);
     const [counter, setCounter] = useState(0);
     const [filter, setFilter] = useState();
+    const firstRender = useRef(true);
 
-    useEffect(() => {
-        localStorage.setItem("bookmarks", JSON.stringify(bookmarks))
+
+    if (firstRender.current) {
+        firstRender.current = false;
+        let item = localStorage.getItem("bookmarks")
+        setBookmarks(JSON.parse(item))
+        console.log("item", typeof item)
+        console.log("iniital bookmarks", bookmarks)
+    }
+
+    useEffect(() => { 
+            localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     }, [bookmarks])
+
 
     function addBookmark(url, title, tag) {
         let newBookmark = {'url': url, 'title': title, 'tag': tag, 'id': counter};
@@ -19,12 +30,10 @@ function BookmarkingApp() {
         console.log("added new bookmark", bookmarks)
     }
 
-    // function filterByTag(event) {
-    //     console.log("EVENT VAL", event)
-    //     let filteredBookmarks = bookmarks.filter(element => element.tag === event.target.value)
-    //     console.log("FILTERED", filteredBookmarks);
-    // }
 
+
+
+    
     const bookmarkTags = new Set(bookmarks.map(element => element.tag));
 
     const filteredBookmarks = bookmarks.filter(bookmark => filter ? bookmark.tag === filter : bookmark);
